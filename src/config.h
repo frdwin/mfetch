@@ -2,3 +2,4 @@
 #define OS_LABEL      "os"
 #define KERNEL_LABEL  "kernel"
 #define SHELL_LABEL   "shell"
+#define UPTIME_LABEL  "uptime"
