@@ -1,4 +1,4 @@
-// TODO: pkgs; customized ascii art; colors
+// TODO: pkgs; customized ascii art
 #include <stdio.h>
 #include <sys/utsname.h>
 #include <string.h>
@@ -9,6 +9,7 @@
 #include "os.h"
 #include "uptime.h"
 #include "color.h"
+#include "pkgs.h"
 
 // Macro to calculate the size of the label and return the biggest label.
 #define LABEL_LENGTH(l) (int)(strlen(l))
@@ -68,6 +69,14 @@ int main(void)
   printf("%s%*s ", LABEL_COLOR, max_len, UPTIME_LABEL);
   if ((n = fetch_uptime(uptime)) == 0)
     printf(" %s%s\n", RESET, uptime);
+  else
+    printf(" %s%s\n", RESET, "error");
+
+  // Fetch and print pkgs.
+  int pkgs;
+  printf("%s%*s ", LABEL_COLOR, max_len, PKGS_LABEL);
+  if ((n = fetch_pkgs(os_name, &pkgs)) == 0)
+    printf(" %s%d\n", RESET, pkgs);
   else
     printf(" %s%s\n", RESET, "error");
 
