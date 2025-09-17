@@ -12,7 +12,6 @@ int fetch_os(char *os_name, int len)
   
   char s[S_BUF_LEN];
   char *p;
-  char *token;
 
   // Detect the ID line inside /etc/os-release.
   while ((p = fgets(s, S_BUF_LEN, f)) != NULL)
