@@ -1,6 +1,6 @@
 # mfetch - Minimal Info Fetcher
 
-`mfetch` is just another information fetcher, made with love in C (C23).
+`mfetch` is just another information fetcher, yet blazingly fast, made with love in C (C23).
 
 It is very minimal and only works on *GNU/Linux*.
 
