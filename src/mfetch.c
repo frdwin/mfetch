@@ -10,13 +10,17 @@
 #include "uptime.h"
 #include "color.h"
 #include "pkgs.h"
+#include "opt.h"
 
 // Macro to calculate the size of the label and return the biggest label.
 #define LABEL_LENGTH(l) (int)(strlen(l))
 #define MAX_LABEL(l1, l2) ((LABEL_LENGTH(l1) > LABEL_LENGTH(l2)) ? l1 : l2)
 
-int main(void)
+int main(int argc, char **argv)
 {
+  if (argc > 3)
+    print_help(argv[0]);
+
   int n;
 
   // Calculate the maximum label length the user setted in config.h.

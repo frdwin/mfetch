@@ -1,7 +1,7 @@
 # Variables
 CC = gcc
 CFLAGS = -Wall -Wextra
-SRC = src/kernel.c src/os.c src/mfetch.c src/pkgs.c src/shell.c src/uptime.c src/user.c
+SRC = src/kernel.c src/os.c src/mfetch.c src/pkgs.c src/shell.c src/uptime.c src/user.c src/opt.c
 OBJ = $(SRC:.c=.o)
 TARGET = mfetch
 INSTALL_DIR = /usr/bin
