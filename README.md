@@ -4,7 +4,7 @@
 
 It is very minimal and only works on *GNU/Linux*.
 
-You don't get a ascii art by default, but you can tell `mfetch` to get one from a file (yet to be done).
+You don't get a ascii art by default, but you can tell `mfetch` to get one from a file.
 
 We think this will give you more freedom to choose your preferred ascii art.
 
@@ -31,7 +31,11 @@ $ sudo make uninstall
 $ cd .. && rm -rf mfetch
 ```
 
+## Usage
+```
+$ mfetch -h
+```
 ## What's next?
 
-- [ ] Add other distros (only working on Void).
-- [ ] Add printing an ascii art from a file.
+- [ ] Add other distros (only fully working on Void).
+- [ ] Make packages for Void and NixOS
