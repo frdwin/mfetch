@@ -4,7 +4,7 @@
 
 It is very minimal and only works on *GNU/Linux*.
 
-You don't get a ascii art by default, but you can tell `mfetch` to get one from a file.
+You don't get a ascii art by default, but you can tell `mfetch` to get one from a file (maximum of 8 lines).
 
 We think this will give you more freedom to choose your preferred ascii art.
 
@@ -41,4 +41,3 @@ $ mfetch -h
 ## What's next?
 
 - [ ] Add other distros (only fully working on Void).
-- [ ] Make packages for Void and NixOS
