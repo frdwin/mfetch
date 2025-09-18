@@ -58,7 +58,7 @@ int main(int argc, char **argv)
   if (aa.enabled && aa.n_lines > 1)
   {
     printf("%s\n", aa.lines[0]);
-    printf("%s %s%*s ", aa.lines[1], LABEL_COLOR, max_len, USER_LABEL);
+    printf("%s\t%s%*s ", aa.lines[1], LABEL_COLOR, max_len, USER_LABEL);
   }
   else
   {
@@ -74,7 +74,7 @@ int main(int argc, char **argv)
   int slen = 10;
   char shell_name[slen];
   if (aa.enabled && aa.n_lines > 2)
-    printf("%s %s%*s ", aa.lines[2], LABEL_COLOR, max_len, SHELL_LABEL);
+    printf("%s\t%s%*s ", aa.lines[2], LABEL_COLOR, max_len, SHELL_LABEL);
   else
     printf("%s%*s ", LABEL_COLOR, max_len_ascii, SHELL_LABEL);
 
@@ -87,7 +87,7 @@ int main(int argc, char **argv)
   int olen = 30;
   char os_name[olen];
   if (aa.enabled && aa.n_lines > 3)
-    printf("%s %s%*s ", aa.lines[3], LABEL_COLOR, max_len, OS_LABEL);
+    printf("%s\t%s%*s ", aa.lines[3], LABEL_COLOR, max_len, OS_LABEL);
   else
     printf("%s%*s ", LABEL_COLOR, max_len_ascii, OS_LABEL);
 
@@ -99,7 +99,7 @@ int main(int argc, char **argv)
   // Fetch and print kernel release number.
   char kern_release[_UTSNAME_RELEASE_LENGTH];
   if (aa.enabled && aa.n_lines > 4)
-    printf("%s %s%*s ", aa.lines[4], LABEL_COLOR, max_len, KERNEL_LABEL);
+    printf("%s\t%s%*s ", aa.lines[4], LABEL_COLOR, max_len, KERNEL_LABEL);
   else
     printf("%s%*s ", LABEL_COLOR, max_len_ascii, KERNEL_LABEL);
 
@@ -111,7 +111,7 @@ int main(int argc, char **argv)
   // Fetch and print uptime.
   char uptime[8];
   if (aa.enabled && aa.n_lines > 5)
-    printf("%s %s%*s ", aa.lines[5], LABEL_COLOR, max_len, UPTIME_LABEL);
+    printf("%s\t%s%*s ", aa.lines[5], LABEL_COLOR, max_len, UPTIME_LABEL);
   else
     printf("%s%*s ", LABEL_COLOR, max_len_ascii, UPTIME_LABEL);
 
@@ -123,7 +123,7 @@ int main(int argc, char **argv)
   // Fetch and print pkgs.
   int pkgs;
   if (aa.enabled && aa.n_lines > 6)
-    printf("%s %s%*s ", aa.lines[6], LABEL_COLOR, max_len, PKGS_LABEL);
+    printf("%s\t%s%*s ", aa.lines[6], LABEL_COLOR, max_len, PKGS_LABEL);
   else
     printf("%s%*s ", LABEL_COLOR, max_len_ascii, PKGS_LABEL);
 
