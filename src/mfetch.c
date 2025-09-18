@@ -40,14 +40,9 @@ int main(int argc, char **argv)
   };
 
   // Check for wrong cli arguments.
-  if (argc > 1 && (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0))
-    print_help(argv[0]);
-  if (argc > 3)
-    print_help(argv[0]);
-  if (argc == 3 && (strcmp(argv[1], "-a") == 0))
+  int status = validate_opts(argc, argv);
+  if (status == 128)
     generate_ascii_art(argv[2], &aa, &max_len_ascii);
-
-  int status;
 
   // Print an empty line
   printf("\n");
