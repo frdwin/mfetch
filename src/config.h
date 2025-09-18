@@ -11,4 +11,4 @@
 
 // Uncomment the following line if you want the
 // colored asterisks after the fetched information.
-//#define COLOR
+// #define COLOR

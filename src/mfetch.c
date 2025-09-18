@@ -144,17 +144,31 @@ int main(int argc, char **argv)
 
   // Print colors
   #ifdef COLOR
-  printf(
-    " %s* %s* %s* %s* %s* %s* %s* %s* \n",
-    BLACK,
-    RED,
-    GREEN,
-    YELLOW,
-    BLUE,
-    MAGENTA,
-    CYAN,
-    WHITE,
-  );
+  if (aa.enabled)
+    printf(
+      " %*s\t* %s* %s* %s* %s* %s* %s* %s* \n",
+      max_len_ascii,
+      BLACK,
+      RED,
+      GREEN,
+      YELLOW,
+      BLUE,
+      MAGENTA,
+      CYAN,
+      WHITE
+    );
+  else
+    printf(
+      " %s* %s* %s* %s* %s* %s* %s* %s* \n",
+      BLACK,
+      RED,
+      GREEN,
+      YELLOW,
+      BLUE,
+      MAGENTA,
+      CYAN,
+      WHITE
+    );
   #endif
 
   return 0;
