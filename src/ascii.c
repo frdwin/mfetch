@@ -22,12 +22,6 @@ void generate_ascii_art(char *file_path, struct ascii_art *aa, int *max_len)
     if (len > line_max_len)
     {
       line_max_len = len;
-
-    }
-    else if (len < line_max_len)
-    {
-      char *p = aa->lines[counter] + len - 1;
-      memset(p, ' ', line_max_len - len + 1);
     }
 
     aa->n_lines++;
@@ -37,7 +31,15 @@ void generate_ascii_art(char *file_path, struct ascii_art *aa, int *max_len)
  // Strip \n from every ASCII art line and add a \t instead.
   for (counter = 0; counter < AA_MAX_LINES; counter++)
   {
-    char *p = aa->lines[counter] + strlen(aa->lines[counter]) - 1;
+    int len = strlen(aa->lines[counter]);
+    if (len < line_max_len)
+    {
+      char *p = aa->lines[counter] + len - 1;
+      memset(p, ' ', line_max_len - len + 1);
+      len += line_max_len - len;
+    }
+
+    char *p = aa->lines[counter] + len - 1;
     p[0] = '\0';
   }
 
