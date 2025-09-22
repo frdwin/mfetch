@@ -5,7 +5,7 @@ int fetch_user(char *username, int len)
 {
   // Get the username from the environment variable and check for errors.
   const char *u = getenv("USER");
-  if (username == NULL)
+  if (u == NULL || (strcmp(u, "") == 0))
     return -1;
 
   // Copy the username to the given buffer.
