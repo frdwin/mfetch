@@ -38,6 +38,15 @@ $ cd .. && rm -rf mfetch
 ```
 $ mfetch -h
 ```
-## What's next?
+## Supported distros
+<details>
+<summary>Click here.</summary>
 
-- [ ] Add other distros (only fully working on Void).
+- Debian
+- Ubuntu
+- PopOS!
+- Void
+- RedHat
+- Fedora
+- AlmaLinux
+</details>
