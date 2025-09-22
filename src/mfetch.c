@@ -116,7 +116,7 @@ int main(int argc, char **argv)
     printf(" %s%s\n", RESET, "error");
 
   // Fetch and print pkgs.
-  int pkgs;
+  unsigned int pkgs;
   if (aa.enabled && aa.n_lines > 6)
     printf("%s\t%s%*s ", aa.lines[6], LABEL_COLOR, max_len, PKGS_LABEL);
   else

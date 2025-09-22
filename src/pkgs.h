@@ -9,6 +9,6 @@
  * @return 0 on success. The function does not return an error code for failure to open the file.
  *
  */
-int fetch_pkgs(char *os_name, int *pkgs);
+unsigned int fetch_pkgs(char *os_name, unsigned int *pkgs);
 
 #endif
