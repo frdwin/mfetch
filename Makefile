@@ -8,7 +8,7 @@ INSTALL_DIR = /usr/bin
 
 # Compile executable file
 $(TARGET): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ -lsqlite3 $^
 
 # Compile object files
 %.o: src/%.c
